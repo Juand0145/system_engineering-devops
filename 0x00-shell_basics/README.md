@@ -1,1 +1,0 @@
-Here we can find some of the command scripts to navigate in linux
