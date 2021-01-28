@@ -1,2 +1,2 @@
 #!/bin/bas
-chmod u=x hello
+chmod 100 hello
