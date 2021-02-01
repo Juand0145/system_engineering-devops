@@ -1,0 +1,1 @@
+In this lesson we will learn about variables, expansions and alias
