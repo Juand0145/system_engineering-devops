@@ -1,1 +1,1 @@
-In this file we will learn some basics comands and uses of script to understando the behavior of direction on linux
+In this directory we will learn how to use commands to rediection, filter and mixthem
