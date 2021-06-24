@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Infinite loop That writes I am alive, and have to eb manage
+
+while true
+do
+    sudo bash -c 'echo "I am alive!" >> /tmp/my_process'
+    sleep 2
+done
