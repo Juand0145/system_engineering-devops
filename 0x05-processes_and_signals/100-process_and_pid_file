@@ -2,12 +2,11 @@
 # Creates a temporal file that print infinte and do diferent thinks
 # depending of the signal
 
-sudo echo "$$" > /var/run/holbertonscript.pid
-trap 'echo I hate the kill command; rm /var/run/holbertonscript.pid; kill -9 $$' SIGTERM SIGQUIT
-trap 'echo "Y U no love me?!"' SIGINT
-
-while true
-do
-    echo "To infinity and beyond"
-    sleep 2
+echo "$$" > /var/run/holbertonscript.pid
+trap "echo 'I hate the kill command'; rm /var/run/holbertonscript.pid; exit" SIGTERM
+trap "rm /var/run/holbertonscript.pid; exit" SIGQUIT
+trap "echo 'Y U no love me?!'" SIGINT
+while true; do
+      echo "To infinity and beyond"
+      sleep 2
 done
