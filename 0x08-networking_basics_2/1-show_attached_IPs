@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Is a Bash script that displays
+# all active IPv4 IPs on the machine it’s executed on.
+
+ip -4 a | grep -oP "(?<=inet )[^\/]*"
