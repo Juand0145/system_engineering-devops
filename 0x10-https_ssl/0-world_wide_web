@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Your Bash script must accept 2 arguments
+
+domain="$1"
+subdomain="$2"
+dig "$subdomain.$domain" | awk '/ANSWER SECTION:/{getline; printf "The subdomain %s is a %s record and points to %s\n", var, $4, $5}' var="$subdomain"
