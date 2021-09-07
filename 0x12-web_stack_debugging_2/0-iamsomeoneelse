@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Is a bash script tha logs as the command enter
+
+sudo -u "$1" whoami
