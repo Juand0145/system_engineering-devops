@@ -21,4 +21,4 @@ if __name__ == '__main__':
         file = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
         for i in request:
             file.writerow(
-                [argv[1], USERNAME, i.get('completed'), i.get('title')])
+                [argv[1], USERNAME, i.get("completed"), i.get("title")])
