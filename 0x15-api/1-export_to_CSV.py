@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """Is a Python script to export data in the CSV format"""
+import csv
+import requests
+from sys import argv
 
 if __name__ == "__main__":
-    import csv
-    import requests
-    from sys import argv
 
     USER_ID = argv[1]
     request = requests.get("https://jsonplaceholder.typicode.com/users/{}".
