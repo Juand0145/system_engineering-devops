@@ -10,8 +10,9 @@ if __name__ == "__main__":
     request = requests.get("https://jsonplaceholder.typicode.com/users/{}".
                            format(USER_ID)).json()
     USERNAME = request.get("username")
-    request = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".
-                           format(USER_ID)).json()
+    request = requests.get(
+        "https://jsonplaceholder.typicode.com/todos?userId={}".
+        format(USER_ID)).json()
 
     with open(USER_ID + ".csv", "w") as csv_file:
         file = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
