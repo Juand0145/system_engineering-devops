@@ -3,6 +3,7 @@
 
 
 def number_of_subscribers(subreddit):
+    """scrypt to search the number f suscriber in the reddit api"""
     import requests
     import json
 
