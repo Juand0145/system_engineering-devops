@@ -39,5 +39,5 @@ def number_of_subscribers(subreddit):
 
         return(json_dictionary["data"]["subscribers"])
 
-    except:
+    except(KeyError):
         return (0)

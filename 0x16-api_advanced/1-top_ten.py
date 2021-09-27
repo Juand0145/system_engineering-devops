@@ -7,7 +7,6 @@ def top_ten(subreddit):
     import requests
     import json
 
-    # note that CLIENT_ID refers to 'personal use script' and SECRET_TOKEN to 'token'
     auth = requests.auth.HTTPBasicAuth(
         'm8o3DcygIBR6fKDWjyNaUA', 'VMkfMswZ-UlQqUjyxYC-ZRPCq45q-g')
 
@@ -29,8 +28,6 @@ def top_ten(subreddit):
     # add authorization to our headers dictionary
     headers = {**headers, **{'Authorization': f"bearer {TOKEN}"}}
 
-    # while the token is valid (~2 hours) we just add headers=headers to our requests
-
     try:
         url = 'https://oauth.reddit.com/r/{:s}/hot'.format(subreddit)
         byte_string = requests.get(
@@ -43,5 +40,5 @@ def top_ten(subreddit):
         for element in hot_spots:
             print(element["data"]["title"])
 
-    except:
+    except(KeyError):
         return (None)
