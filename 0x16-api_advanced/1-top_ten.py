@@ -44,4 +44,4 @@ def top_ten(subreddit):
             print(element["data"]["title"])
 
     except:
-        return (0)
+        return (None)
