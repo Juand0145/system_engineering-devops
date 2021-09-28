@@ -4,8 +4,8 @@
 
 def top_ten(subreddit):
     """scrypt to search the number fo 10 hot spots"""
-    import requests
     import json
+    import requests
 
     auth = requests.auth.HTTPBasicAuth(
         'm8o3DcygIBR6fKDWjyNaUA', 'VMkfMswZ-UlQqUjyxYC-ZRPCq45q-g')
